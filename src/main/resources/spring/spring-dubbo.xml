@@ -8,7 +8,9 @@
 	   http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <!-- 使用zookeeper注册中心暴露服务地址 -->
-    <dubbo:registry address="#{props['dubbo.registry.address']}"/>
+    <dubbo:registry address="#{props['dubbo.registry.address']}" group="#{props['dubbo.registry.group']}"/>
+
+    <dubbo:annotation/>
 
     <import resource="classpath*:/spring/dubbo-*.xml"/>
 
