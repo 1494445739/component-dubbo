@@ -14,4 +14,23 @@
 
     <import resource="classpath*:/spring/dubbo-*.xml"/>
 
+    <!-- dubbo异步调用的2种方式，主要体现在consumer端 -->
+    <!--<dubbo:reference id="fooService"-->
+    <!--interface="com.tzg.dubbo.api.FooService"-->
+    <!--check="#{dubboConfig['dubbo.reference.check]}"-->
+    <!--retries="#{dubboConfig['dubbo.reference.retries]}"-->
+    <!--timeout="#{dubboConfig['dubbo.reference.timeout]}">-->
+    <!--&lt;!&ndash; 方法一： 没有回调返回监听 &ndash;&gt;-->
+    <!--<dubbo:method name="fooMethod"-->
+    <!--async="true"-->
+    <!--sent="#{dubboConfig['dubbo.reference.method.sent]}"-->
+    <!--return="#{dubboConfig['dubbo.reference.method.return]}"/>-->
+    <!--&lt;!&ndash; 方法二：　有回调返回，并被处理 &ndash;&gt;-->
+    <!--<dubbo:method name="fooMethod"-->
+    <!--async="true"-->
+    <!--onreturn="demoCallback.onreturn"-->
+    <!--onthrow="demoCallback.onthrow"/>-->
+    <!--</dubbo:reference>-->
+    <!--<bean id="demoCallback" class="com.tzg.dubbo.listener.NotifyImpl"/>-->
+
 </beans>
